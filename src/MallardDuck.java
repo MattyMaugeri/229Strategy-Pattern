@@ -1,11 +1,12 @@
 public class MallardDuck extends Duck {
 
     public MallardDuck() {
-        
+        quackBehaviour = new Quack();
+        flyBehaviour = new FlyWithWings();
     }
 
     @Override
     public void display() {
-        // override generalised duck display method to show a Mallard Duck
+        System.out.println("I'm a real Mallard Duck");
     }
 }

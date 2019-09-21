@@ -1,4 +1,4 @@
-public class Duck {
+public abstract class Duck {
     FlyBehaviour flyBehaviour;
     QuackBehvaiour quackBehaviour;
 
@@ -6,27 +6,25 @@ public class Duck {
 
     }
 
-    public void setFlyBehaviour() {
-
+    public void setFlyBehaviour(FlyBehaviour fb) {     // both set methods are responsible for changing
+        flyBehaviour = fb;                             // behavior dynamically
     }
 
-    public void setQuackBehaviour() {
-
+    public void setQuackBehaviour(QuackBehvaiour qb) {
+        quackBehaviour = qb;
     }
 
     public void performFly() {
-
+        flyBehaviour.fly();
     }
 
     public void performQuack() {
-        
+        quackBehaviour.quack();
     }
 
     public void swim() {
-        // something to do with swimming
+        System.out.println("I am Swimming");
     }
 
-    public void display() {
-        // display of the duck
-    }
+    public abstract void display();
 }
